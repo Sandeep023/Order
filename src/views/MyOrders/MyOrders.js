@@ -452,7 +452,7 @@ const mainChartOpts = {
   },
 };
 
-class Dashboard extends Component {
+class MyOrders extends Component {
   constructor(props) {
     super(props);
 
@@ -500,7 +500,7 @@ class Dashboard extends Component {
             <Card className="text-white bg-primary">
               <CardBody className="pb-0">
                 <div className="text-value">9.823</div>
-                <div>Completed</div>
+                <div>Recieved</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Line data={cardChartData1} options={cardChartOpts1} height={70} />
@@ -512,16 +512,15 @@ class Dashboard extends Component {
             <Card className="text-white bg-warning">
               <CardBody className="pb-0">
                 <div className="text-value">9.823</div>
-                <div>In Progress</div>
+                <div>In-Progress</div>
               </CardBody>
               <div className="chart-wrapper" style={{ height: '70px' }}>
                 <Line data={cardChartData3} options={cardChartOpts3} height={70} />
               </div>
             </Card>
           </Col>
-
         </Row>
-        
+
         <Row>
           <Col>
             <Card>
@@ -532,12 +531,12 @@ class Dashboard extends Component {
                 <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                   <thead className="thead-light">
                   <tr>
-                    <th className="text-center"><i className="icon-people"></i></th>
-                    <th>User</th>
-                    <th className="text-center">Country</th>
-                    <th>Usage</th>
-                    <th className="text-center">Payment Method</th>
-                    <th>Activity</th>
+                    <th className="text-center">Order No</th>
+                    <th>Order Date</th>
+                    <th className="text-center">Recieving Date</th>
+                    <th>Cost</th>
+                    <th className="text-center">Status</th>
+                    <th></th>
                   </tr>
                   </thead>
                   <tbody>
@@ -583,28 +582,19 @@ class Dashboard extends Component {
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Card>
-              <CardHeader>
-                Answer Questions
-              </CardHeader>
-              <CardBody>
-                UserId: asdfasdfa
-                <br />
-                Question: 
-                <textarea />
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: 'center' }}>
-            <Button>Upload</Button>
-          </Col>
+            <Col>
+                <Card>
+                    <CardHeader>
+                        Ask Question
+                    </CardHeader>
+                    <CardBody>
+                    </CardBody>
+                </Card>
+            </Col>
         </Row>
       </div>
     );
   }
 }
 
-export default Dashboard;
+export default MyOrders;
